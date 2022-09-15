@@ -99,7 +99,7 @@ def getWebsiteInfo():
 
 
 def saveWebsiteInfo():
-    f=open(r'C:\Users\Kushagra\Desktop\Minor Project\WebsiteInfo.csv','a+', newline="")
+    f=open(r'C:\Users\ivanb\OneDrive\Desktop\Web Scrapping files\WebsiteInfo.csv','a+', newline="")
     Q = builtwith(Website_URL.get())
     Q['Website URL'] = Website_URL.get()
     # data=""
@@ -130,7 +130,7 @@ def saveWebsiteInfo():
 	        Q_List.append(Q[header[i]])
 
         for i in range(len(Q_List)-1):
-	        Q_List[i]=Q_List[i][0]
+            Q_List[i]=Q_List[i][0]
 
         Q_List_1 = [Q_List]
         writer = csv.writer(f)
@@ -172,5 +172,7 @@ app.mainloop()
 
 
 
-#http://sws.jecrcuniversity.edu.in/parentlogin/index.php
-#http://api.enginem.info/index.php
+#Websites to Scrap
+#https://opentender.eu/
+#https://dot.ca.gov/programs/procurement-and-contracts/contracts-out-for-bid
+#https://dot.ca.gov/programs/procurement-and-contracts/contracts-out-for-bid
